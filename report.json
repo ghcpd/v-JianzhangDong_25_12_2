@@ -1,0 +1,74 @@
+{
+  "issues": [
+    {
+      "id": 1,
+      "package": "pandas",
+      "original_version": "1.2.0",
+      "updated_version": "2.2.3",
+      "reason": "Outdated (2021) and lacking fixes/compatibility; update to current stable."
+    },
+    {
+      "id": 2,
+      "package": "numpy",
+      "original_version": "1.19.0",
+      "updated_version": "1.26.4",
+      "reason": "Outdated; newer releases include bug/security fixes and support for modern Python."
+    },
+    {
+      "id": 3,
+      "package": "scikit-learn",
+      "original_version": "0.22.2",
+      "updated_version": "1.5.2",
+      "reason": "Outdated and incompatible with modern joblib/numpy; upgrade to latest stable."
+    },
+    {
+      "id": 4,
+      "package": "requests",
+      "original_version": "2.25.0",
+      "updated_version": "2.32.3",
+      "reason": "Outdated; update to latest to include security and TLS improvements."
+    },
+    {
+      "id": 5,
+      "package": "pyyaml",
+      "original_version": "5.3.1",
+      "updated_version": "6.0.2",
+      "reason": "Known CVEs in older releases (unsafe load); upgrade to patched version."
+    },
+    {
+      "id": 6,
+      "package": "matplotlib",
+      "original_version": "3.2.2",
+      "updated_version": "3.9.2",
+      "reason": "Outdated; update for bug fixes and Python 3.12 support."
+    },
+    {
+      "id": 7,
+      "package": "tqdm",
+      "original_version": "4.48.0",
+      "updated_version": "4.66.5",
+      "reason": "Outdated; update for performance and bug fixes."
+    },
+    {
+      "id": 8,
+      "package": "python-dateutil",
+      "original_version": "2.8.1",
+      "updated_version": "2.9.0.post0",
+      "reason": "Outdated; update for tzdata handling improvements."
+    },
+    {
+      "id": 9,
+      "package": "joblib",
+      "original_version": "0.14.0",
+      "updated_version": "1.4.2",
+      "reason": "Outdated and incompatible with current scikit-learn; upgrade to supported version."
+    },
+    {
+      "id": 10,
+      "package": "rich",
+      "original_version": "7.0.0",
+      "updated_version": "13.9.4",
+      "reason": "Outdated; update for features and fixes."
+    }
+  ]
+}
