@@ -1,10 +1,28 @@
-pandas==1.2.0
-numpy==1.19.0
-scikit-learn==0.22.2
-requests==2.25.0
-pyyaml==5.3.1
-matplotlib==3.2.2
-tqdm==4.48.0
-python-dateutil==2.8.1
-joblib==0.14.0
-rich==7.0.0
+# Updated dependencies (2025-12-02). Requires Python >= 3.9. 
+# For Python >= 3.14, this file relaxes pins for compiled libs; use --pre and the
+# scientific-python nightly wheels index (auto_test does this automatically).
+
+# Compiled stack (pinned for stable Py<3.14; relaxed for Py>=3.14)
+numpy==1.26.4; python_version < "3.13"
+numpy>=2.1; python_version >= "3.13"
+
+pandas==2.2.2; python_version < "3.14"
+pandas>=2.2.2; python_version >= "3.14"
+
+scikit-learn==1.5.2; python_version < "3.14"
+scikit-learn>=1.5.2; python_version >= "3.14"
+
+scipy==1.11.4; python_version < "3.13"
+scipy>=1.11.4; python_version >= "3.13"
+
+matplotlib==3.9.2; python_version < "3.14"
+matplotlib>=3.9.2; python_version >= "3.14"
+
+# Pure-Python (should install across supported Python versions)
+requests==2.32.3
+pyyaml==6.0.2
+tqdm==4.66.5
+python-dateutil==2.9.0.post0
+joblib==1.4.2
+rich==13.9.3
+tzdata==2024.2

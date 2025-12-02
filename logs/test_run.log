@@ -1,0 +1,19 @@
+2025-12-02 15:57:50,821 [INFO] Environment info: {"platform": "Windows-11-10.0.26100-SP0", "python_version": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]", "python_version_info": [3, 14, 0], "is_windows": true, "is_docker": false}
+2025-12-02 15:57:50,822 [INFO] ================= Testing corrected =================
+2025-12-02 15:57:50,975 [INFO] Creating virtual environment at D:\vscoderprojects\v-JianzhangDong_25_12_02\raptor-secondary\v-JianzhangDong_25_12_2\.venv_tests\corrected
+2025-12-02 15:57:59,192 [INFO] Running command: D:\vscoderprojects\v-JianzhangDong_25_12_02\raptor-secondary\v-JianzhangDong_25_12_2\.venv_tests\corrected\Scripts\python.exe -m pip install --upgrade pip
+2025-12-02 15:58:07,043 [INFO] Command exit code: 0
+2025-12-02 15:58:07,043 [INFO] Output:
+Requirement already satisfied: pip in d:\vscoderprojects\v-jianzhangdong_25_12_02\raptor-secondary\v-jianzhangdong_25_12_2\.venv_tests\corrected\lib\site-packages (25.2)
+Collecting pip
+  Using cached pip-25.3-py3-none-any.whl.metadata (4.7 kB)
+Using cached pip-25.3-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 25.2
+    Uninstalling pip-25.2:
+      Successfully uninstalled pip-25.2
+Successfully installed pip-25.3
+
+2025-12-02 15:58:07,043 [INFO] [pip] Using nightly wheels index for corrected on Python (3, 14, 0)
+2025-12-02 15:58:07,044 [INFO] Running command: D:\vscoderprojects\v-JianzhangDong_25_12_02\raptor-secondary\v-JianzhangDong_25_12_2\.venv_tests\corrected\Scripts\python.exe -m pip install -r D:\vscoderprojects\v-JianzhangDong_25_12_02\raptor-secondary\v-JianzhangDong_25_12_2\requirements.txt --pre --prefer-binary --only-binary :all: --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple
