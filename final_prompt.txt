@@ -1,0 +1,66 @@
+You are a dependency maintenance engineer. Your task is to analyze the provided requirements.txt, identify outdated, vulnerable, or conflicting dependencies, and generate a corrected version of the file with proper, secure, and up-to-date package versions.
+
+Your responsibilities include:
+
+1. Analyze the provided requirements.txt, identify all outdated, deprecated, vulnerable, or incompatible dependencies, and list each issue with the library name and the problematic version.
+
+2. Detect libraries that cause version conflicts, security vulnerabilities, or installation failures based on their current pinned versions.
+
+3. Create a backup of the original requirements.txt named requirements_backup.txt before making any modifications.
+
+4. Repair the dependency list by directly modifying the provided requirements.txt file. Ensure that:
+
+   All packages are updated to stable and up-to-date versions.
+
+   No deprecated, vulnerable, or insecure versions remain.
+
+   All dependency constraints are compatible with each other.
+
+5. For each dependency issue you identify, generate a simplified report.json that specifies which package needs to be updated, what the original version was, and what the     
+   updated version should be.
+   If the package in requirements.txt has no pinned version, leave original_version as an empty string.
+   The report.json must follow the structure below:
+{
+  "issues": [
+    {
+      "id": 1,
+      "package": "requests",
+      "original_version": "2.22.0",
+      "updated_version": "2.31.0",
+      "reason": "Older version contains known security vulnerabilities."
+    },
+    {
+      "id": 2,
+      "package": "flask",
+      "original_version": "",
+      "updated_version": "2.3.3",
+      "reason": "Version not specified; must be pinned to avoid unexpected upgrades."
+    }
+  ]
+}
+
+
+6. Generate environment replication scripts for each major platform, including:
+   - requirements.txt, Dockerfile, and setup.sh (for Linux/macOS)
+   - run_test.sh (Linux/macOS), run_test.bat (Windows)
+
+7. Create a folder named auto_test and implement an automated testing script auto_test.py inside it, with the following functionality:
+   - Automatically detect the current runtime environment: Windows / Linux / Docker.
+   - For two dependency files:
+	requirements_backup.txt (may contain dependency issues)
+	requirements.txt (corrected dependency file)
+     Create a clean virtual environment for each dependency file (using venv or virtualenv).
+     Install the corresponding dependencies in each environment.
+   - In each environment, automatically generate a set of inputs or example scripts to verify that the project can run successfully.
+   - Record the execution results, including normal outputs and any errors.
+   - Save detailed results and error messages of each test into logs/test_run.log.
+     Expected outcome: the environment with requirements_backup.txt may encounter errors, while the environment with requirements.txt should run successfully.Record the  
+     execution results, including normal outputs and any errors.
+   - To verify whether the modifications applied to requirements.txt resolve the dependency issues present in the original file.
+
+8. Generate a README.md file that provides:
+   - An overview of all generated files and their purpose.
+   - Step-by-step instructions to set up the environment.
+   - How to run the test scripts (run_test.sh for Linux/macOS, run_test.bat for Windows).
+   - How to use auto_test.py for automatic environment detection and testing.
+   - How to check logs in logs/test_run.log.
